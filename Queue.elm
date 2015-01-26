@@ -12,11 +12,12 @@ module Queue (
 {-| Just a simple queue data type -}
 
 import List
+import List((::))
 
 type Queue a = Queue (List a) (List a)
 
 empty : Queue a
-empty = []
+empty = Queue [] []
 
 push : a -> Queue a -> Queue a
 push x (Queue f b) = (Queue f (x::b))
@@ -25,7 +26,7 @@ pop : Queue a -> Maybe (a, Queue a)
 pop (Queue f b) = case f of
   [] -> case b of
     [] -> Nothing 
-    _  -> let x :: f' = List.reverse b in Just (x, Queue f' [])
+    _  -> let (x :: f') = List.reverse b in Just (x, Queue f' [])
   x :: xs -> Just (x, Queue xs b)
 
 isEmpty : Queue a -> Bool
@@ -37,7 +38,7 @@ length : Queue a -> Int
 length (Queue f b) = List.length f + List.length b
 
 map : (a -> b) -> Queue a -> Queue b
-map g (Queue f b) = Queue (map g f) (map g b)
+map g (Queue f b) = Queue (List.map g f) (List.map g b)
 
 toList : Queue a -> List a
 toList (Queue f b) = f ++ List.reverse b
