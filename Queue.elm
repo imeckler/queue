@@ -9,7 +9,17 @@ module Queue (
   toList
   ) where
 
-{-| Just a simple queue data type -}
+{-| Just a simple queue data type.
+
+# Construction
+@docs empty, push
+
+# Inspection
+@docs pop
+
+# Utilities
+@docs isEmpty, length, map, toList
+-}
 
 import List
 import List((::))
