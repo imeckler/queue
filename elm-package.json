@@ -1,0 +1,15 @@
+{
+    "version": "1.0.1",
+    "summary": "Just a simple queue type.",
+    "repository": "https://github.com/imeckler/queue.git",
+    "license": "BSD3",
+    "source-directories": [
+        "."
+    ],
+    "exposed-modules": [
+        "Queue"
+    ],
+    "dependencies": {
+        "elm-lang/core": "1.1.0 <= v < 2.0.0"
+    }
+}
