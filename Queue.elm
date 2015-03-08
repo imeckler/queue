@@ -23,8 +23,10 @@ module Queue (
 
 import List
 import List((::))
+import Queue.Internal as I
+import Queue.Internal(Queue(Queue))
 
-type Queue a = Queue (List a) (List a)
+type alias Queue a = I.Queue a
 
 empty : Queue a
 empty = Queue [] []
