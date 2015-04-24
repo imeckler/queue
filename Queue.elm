@@ -21,10 +21,9 @@ module Queue (
 @docs isEmpty, length, map, toList
 -}
 
-import List
-import List((::))
+import List exposing ((::))
 import Queue.Internal as I
-import Queue.Internal(Queue(Queue))
+import Queue.Internal exposing (Queue(Queue))
 
 type alias Queue a = I.Queue a
 
