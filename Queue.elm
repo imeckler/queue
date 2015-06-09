@@ -6,7 +6,8 @@ module Queue (
   isEmpty,
   length,
   map,
-  toList
+  toList,
+  fromList
   ) where
 
 {-| Just a simple queue data type.
@@ -18,7 +19,7 @@ module Queue (
 @docs pop
 
 # Utilities
-@docs isEmpty, length, map, toList
+@docs isEmpty, length, map, toList, fromList
 -}
 
 import List exposing ((::))
@@ -53,4 +54,9 @@ map g (Queue f b) = Queue (List.map g f) (List.map g b)
 
 toList : Queue a -> List a
 toList (Queue f b) = f ++ List.reverse b
+
+-- | O(1). 
+--   The next pop will require that the entire list be reversed.
+fromList : List a -> Queue a
+fromList = Queue []
 
