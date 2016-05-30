@@ -1,4 +1,4 @@
-module Queue (
+module Queue exposing (
   Queue,
   empty,
   push,
@@ -7,7 +7,7 @@ module Queue (
   length,
   map,
   toList
-  ) where
+  )
 
 {-| Just a simple queue data type.
 
@@ -25,8 +25,7 @@ module Queue (
 -}
 
 import List exposing ((::))
-import Queue.Internal as I
-import Queue.Internal exposing (Queue(Queue))
+import Queue.Internal as I exposing (Queue(Queue))
 
 {-| A queue is a sequence supporting O(1) appending (`push`) of a new
     element to the back and amortizsed O(1) removal of the element at the

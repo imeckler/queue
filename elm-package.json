@@ -1,5 +1,5 @@
 {
-    "version": "1.1.2",
+    "version": "1.1.3",
     "summary": "Just a simple queue type.",
     "repository": "https://github.com/imeckler/queue.git",
     "license": "BSD3",
@@ -11,7 +11,7 @@
         "Queue.Internal"
     ],
     "dependencies": {
-        "elm-lang/core": "3.0.0 <= v < 4.0.0"
+        "elm-lang/core": "4.0.1 <= v < 5.0.0"
     },
-    "elm-version": "0.16.0 <= v < 0.17.0"
+    "elm-version": "0.17.0 <= v < 0.18.0"
 }
