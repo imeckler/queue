@@ -1,4 +1,4 @@
-module Queue.Internal (Queue(..)) where
+module Queue.Internal exposing (Queue(..))
 
 {-| Internal representation of the queue type.
 
