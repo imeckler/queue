@@ -5,6 +5,8 @@ module Queue.Internal exposing (Queue(..))
 @docs Queue
 -}
 
-{-| See [this blog post](http://parametricity.com/posts/2015-02-19-animating.html). -}
-type Queue a = Queue (List a) (List a)
 
+{-| See [this blog post](http://parametricity.com/posts/2015-02-19-animating.html).
+-}
+type Queue a
+    = Queue (List a) (List a)
