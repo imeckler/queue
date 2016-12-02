@@ -55,7 +55,7 @@ pop (Queue f b) =
 
         _  -> 
           case List.reverse b of
-            (x :: f') -> Just (x, Queue f' [])
+            (x :: f_) -> Just (x, Queue f_ [])
             [] -> Debug.crash "Impossible!"
 
 {-| -}
